@@ -19,7 +19,24 @@ No build step required - just open the generated HTML in a browser. Can also be 
 
 ## Installation
 
-Copy the `skills/revealjs` folder to your Claude Code skills directory:
+### Plugin (recommended)
+
+Add the marketplace and install the plugin from within Claude Code:
+
+```
+/plugin marketplace add ryanbbrown/reveal-js-skill
+/plugin install revealjs@revealjs-skill
+```
+
+Then install dependencies (needed for overflow checking and PDF export):
+
+```bash
+npm install --prefix ~/.claude/plugins/cache/revealjs
+```
+
+### Manual
+
+Alternatively, copy the `skills/revealjs` folder to your Claude Code skills directory:
 
 ```bash
 # User-level installation (available in all projects)
@@ -34,6 +51,8 @@ Install dependencies (needed for overflow checking and PDF export):
 ```bash
 npm install
 ```
+
+### Dependencies
 
 - **[Playwright](https://playwright.dev/)** - Browser automation for overflow detection
 - **[DeckTape](https://github.com/astefanutti/decktape)** - PDF export and slide screenshots (using a [fork](https://github.com/ryanbbrown/decktape) that adds `--slides` flag for capturing specific slides, enabling faster iteration when fixing visual issues)
