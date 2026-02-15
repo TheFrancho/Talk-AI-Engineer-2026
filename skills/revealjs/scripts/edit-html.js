@@ -182,12 +182,12 @@ const editorScript = `
       
       if (response.ok) {
         hasChanges = false;
-        location.href = '/?saved=1';
+        location.href = '/?saved=1' + location.hash;
       } else {
         throw new Error('Save failed');
       }
     } catch (err) {
-      location.href = '/?error=' + encodeURIComponent(err.message);
+      location.href = '/?error=' + encodeURIComponent(err.message) + location.hash;
     }
   }
 
