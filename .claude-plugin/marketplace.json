@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "revealjs",
-      "source": ".",
+      "source": "./",
       "description": "Create polished, professional reveal.js presentations with themes, multi-column layouts, callout boxes, code highlighting, animations, speaker notes, and custom styling.",
       "version": "1.0.0",
       "license": "MIT",
