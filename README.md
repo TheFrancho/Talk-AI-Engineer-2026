@@ -24,7 +24,7 @@ No build step required - just open the generated HTML in a browser. Can also be 
 Add the marketplace and install the plugin from within Claude Code:
 
 ```
-/plugin marketplace add ryanbbrown/reveal-js-skill
+/plugin marketplace add ryanbbrown/revealjs-skill
 /plugin install revealjs@revealjs-skill
 ```
 

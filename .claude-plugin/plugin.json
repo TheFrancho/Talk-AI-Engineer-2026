@@ -5,8 +5,8 @@
   "author": {
     "name": "Ryan Brown"
   },
-  "homepage": "https://github.com/ryanbbrown/reveal-js-skill",
-  "repository": "https://github.com/ryanbbrown/reveal-js-skill",
+  "homepage": "https://github.com/ryanbbrown/revealjs-skill",
+  "repository": "https://github.com/ryanbbrown/revealjs-skill",
   "license": "MIT",
   "keywords": ["reveal.js", "presentation", "slides", "html", "slideshow"]
 }
