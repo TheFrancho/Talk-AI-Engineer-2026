@@ -336,7 +336,7 @@ This opens the presentation in a local server where they can click any text to e
 > ```
 > node <resolved-path>/scripts/edit-html.js <presentation-directory>/presentation.html
 > ```
-> Click any text to edit, then click Save. Press Ctrl+C to stop the server when done.
+> Click any text to edit, press Escape to deselect, then click Save. Press Ctrl+C to stop the server when done.
 
 ## CSS Components Reference
 

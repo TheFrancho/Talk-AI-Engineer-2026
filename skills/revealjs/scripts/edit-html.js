@@ -78,6 +78,28 @@ const editorScript = `
     font-size: 13px;
     margin-left: 10px;
   }
+  .edit-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    z-index: 9999999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .edit-toast.error {
+    background: #d32f2f;
+  }
+  .edit-toast.visible {
+    opacity: 1;
+  }
   [contenteditable="true"] {
     outline: 2px dashed transparent;
     transition: outline-color 0.2s;
@@ -91,6 +113,7 @@ const editorScript = `
   }
 </style>
 
+<div class="edit-toast" id="editToast"></div>
 <div class="edit-toolbar">
   <button onclick="saveChanges()">💾 Save</button>
   <button class="secondary" onclick="location.reload()">↻ Reload</button>
@@ -98,17 +121,36 @@ const editorScript = `
 </div>
 
 <script>
+  function showToast(msg, isError) {
+    const toast = document.getElementById('editToast');
+    toast.textContent = msg;
+    toast.className = 'edit-toast visible' + (isError ? ' error' : '');
+    setTimeout(() => { toast.className = 'edit-toast'; }, 2000);
+  }
+
+  // Show toast on reload after save
+  const params = new URLSearchParams(location.search);
+  if (params.has('saved')) { showToast('Saved successfully'); history.replaceState(null, '', '/'); }
+  if (params.has('error')) { showToast('Error: ' + params.get('error'), true); history.replaceState(null, '', '/'); }
+
   // Make elements editable
   document.querySelectorAll('${EDITABLE_SELECTORS}').forEach(el => {
     // Skip if inside toolbar or already has contenteditable set to false
     if (el.closest('.edit-toolbar') || el.getAttribute('contenteditable') === 'false') return;
-    
+
     // Skip elements that only contain other editable elements (to avoid nested editing)
-    const hasOnlyElementChildren = el.children.length > 0 && 
+    const hasOnlyElementChildren = el.children.length > 0 &&
       Array.from(el.childNodes).every(n => n.nodeType !== 3 || !n.textContent.trim());
     if (hasOnlyElementChildren && el.tagName !== 'LI') return;
-    
+
     el.setAttribute('contenteditable', 'true');
+  });
+
+  // Escape to exit edit mode (blur the active element)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.activeElement.getAttribute('contenteditable') === 'true') {
+      document.activeElement.blur();
+    }
   });
 
   // Track changes
@@ -122,29 +164,14 @@ const editorScript = `
 
   // Save function
   async function saveChanges() {
-    const status = document.getElementById('editStatus');
-    status.textContent = 'Saving...';
-    
-    // Remove contenteditable and toolbar before getting HTML
-    const toolbar = document.querySelector('.edit-toolbar');
-    toolbar.remove();
-    
-    document.querySelectorAll('[contenteditable]').forEach(el => {
-      el.removeAttribute('contenteditable');
+    // Clone the document and strip editor UI from the clone (leave live DOM intact)
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll('.edit-toolbar, .edit-toast').forEach(el => el.remove());
+    clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    clone.querySelectorAll('style, script').forEach(el => {
+      if (el.textContent.includes('edit-toolbar') || el.textContent.includes('saveChanges')) el.remove();
     });
-    
-    // Remove the injected style and script
-    const injectedElements = document.querySelectorAll('style, script');
-    const toRemove = [];
-    injectedElements.forEach(el => {
-      if (el.textContent.includes('edit-toolbar') || el.textContent.includes('saveChanges')) {
-        toRemove.push(el);
-      }
-    });
-    toRemove.forEach(el => el.remove());
-    
-    // Get the clean HTML
-    const html = '<!DOCTYPE html>\\n' + document.documentElement.outerHTML;
+    const html = '<!DOCTYPE html>\\n' + clone.outerHTML;
     
     try {
       const response = await fetch('/save', {
@@ -155,14 +182,12 @@ const editorScript = `
       
       if (response.ok) {
         hasChanges = false;
-        alert('Saved successfully!');
-        location.reload();
+        location.href = '/?saved=1';
       } else {
         throw new Error('Save failed');
       }
     } catch (err) {
-      alert('Error saving: ' + err.message);
-      location.reload();
+      location.href = '/?error=' + encodeURIComponent(err.message);
     }
   }
 
@@ -198,7 +223,8 @@ const server = http.createServer((req, res) => {
   }
 
   // Serve the HTML file with editor injected
-  if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
+  const reqPath = req.url.split('?')[0];
+  if (req.method === 'GET' && (reqPath === '/' || reqPath === '/index.html')) {
     try {
       let html = fs.readFileSync(htmlFilePath, 'utf8');
       
@@ -250,7 +276,7 @@ server.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
   console.log(`\n🖊️  HTML Editor running at ${url}`);
   console.log(`   Editing: ${htmlFilePath}\n`);
-  console.log('   Click any text to edit, then click Save.\n');
+  console.log('   Click any text to edit, press Escape to deselect, then click Save.\n');
   console.log('   Press Ctrl+C to stop the server.\n');
 
   // Try to open browser
