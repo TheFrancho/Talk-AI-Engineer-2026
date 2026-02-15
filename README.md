@@ -56,6 +56,16 @@ Claude Code will:
 4. Check for content overflow
 5. Review screenshots of every slide for visual issues
 
+## Browser Editing
+
+After generating a presentation, you can edit text directly in the browser — no need to touch raw HTML:
+
+```bash
+node ~/.claude/skills/revealjs/scripts/edit-html.js my-presentation/presentation.html
+```
+
+This opens the presentation in a local server where you can click any text to edit it inline, then click Save to write changes back to the file. Useful for wordsmithing, fixing typos, or tweaking copy after Claude generates the initial version.
+
 ## Features
 
 Beyond base Reveal.js, this skill adds:

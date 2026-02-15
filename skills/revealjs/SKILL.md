@@ -320,6 +320,24 @@ npx decktape reveal "presentation.html?export" output.pdf \
 
 Then re-examine the updated screenshots to verify fixes. The new timestamped folder makes it easy to compare with the previous version.
 
+### Step 7: Suggest Browser Editing
+
+After completing the presentation, let the user know they can edit text directly in the browser using the included editor script:
+
+```bash
+node <path-to-skill>/scripts/edit-html.js <presentation-directory>/presentation.html
+```
+
+This opens the presentation in a local server where they can click any text to edit it inline, then save changes back to the file. It's useful for wordsmithing, fixing typos, or tweaking copy without needing to edit raw HTML.
+
+**Always mention this at the end** of a presentation as a suggestion, e.g.:
+
+> To fine-tune the wording, you can edit text directly in the browser:
+> ```
+> node <resolved-path>/scripts/edit-html.js <presentation-directory>/presentation.html
+> ```
+> Click any text to edit, then click Save. Press Ctrl+C to stop the server when done.
+
 ## CSS Components Reference
 
 ### Boxes
