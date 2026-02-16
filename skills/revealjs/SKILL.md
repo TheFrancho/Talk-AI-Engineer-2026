@@ -1,6 +1,6 @@
 ---
 name: revealjs
-description: Create polished, professional reveal.js presentations. Use when the user asks to create slides, a presentation, a deck, or a slideshow. Supports themes, multi-column layouts, callout boxes, code highlighting, animations, speaker notes, and custom styling. Generates HTML + CSS with no build step required.
+description: Create polished, professional reveal.js presentations. Use when the user asks to create slides, a presentation, a deck, or a slideshow. Supports themes, multi-column layouts, code highlighting, animations, speaker notes, and custom styling. Generates HTML + CSS with no build step required.
 ---
 
 # Reveal.js Presentations
@@ -65,10 +65,10 @@ A reveal.js presentation consists of:
 
 **Diverse presentation is key.** Even when slides have similar content types, vary the visual presentation:
 
-- Use **different layouts** across slides: columns on one, stacked boxes on another, callouts with icons on a third
-- Mix container styles: plain text, boxes, callouts, blockquotes
+- Use **different layouts** across slides: columns on one, stacked containers on another, styled cards on a third
+- Mix container styles: plain text, custom styled containers, blockquotes
 - Use **visual hierarchy**: `<strong>` for key terms, different colors to distinguish categories
-- Break up lists with other elements (quotes, callouts, columns)
+- Break up lists with other elements (quotes, styled containers, columns)
 - Don't repeat the same layout pattern on consecutive slides
 
 **Keep it scannable:**
@@ -157,8 +157,6 @@ The base file includes:
   --secondary-color: #ff9800;
   --text-color: #222;       /* Use light color (e.g., #FAF7F2) for dark backgrounds */
   --muted-color: #666;      /* Adjust for dark backgrounds too */
-  --box-bg: #f5f5f5;
-  --box-border: #ddd;
 }
 ```
 
@@ -188,9 +186,7 @@ The base file includes:
 }
 ```
 
-4. **Component classes** - boxes, callouts, etc. (see [CSS Components Reference](#css-components-reference))
-
-5. **Text size utilities** (use these to scale up text when slides have less content):
+4. **Text size utilities** (use these to scale up text when slides have less content):
 ```css
 /* Base text is 16pt - use these classes to increase size when needed */
 .text-lg { font-size: 18pt; }    /* Slightly larger */
@@ -207,9 +203,15 @@ The base file includes:
 - When a slide has less content, use `.text-lg`, `.text-xl`, etc. to fill space appropriately
 - This approach prevents overflow on content-heavy slides while allowing flexibility on lighter slides
 
+**Custom CSS classes for repeated patterns:**
+
+Use inline styles for layout (grids, flex containers) since those vary per slide. But when a visual pattern appears on multiple slides, create a dedicated CSS class in `styles.css` instead of repeating inline styles. This keeps the HTML clean and ensures consistency. Common examples: stat boxes (number + label), feature cards (icon + title + description), timeline/process steps, profile/bio cards. If an element repeats 3+ times, it should be a class.
+
 ### Step 4: Fill in the HTML Content
 
-Edit the generated HTML file to add content to each slide. Follow these patterns:
+**IMPORTANT: Use the Edit tool to fill in slides incrementally** — one or a few slides at a time. Do NOT rewrite the entire HTML file with the Write tool. The scaffold generates unique placeholder text per slide (e.g., `Slide 2 Title Here`), so each section can be targeted with Edit. This is more token-efficient and less error-prone than generating the full file at once.
+
+Follow these patterns:
 
 **Standard slide structure:**
 ```html
@@ -250,6 +252,7 @@ Why inline styles for grids? Each slide's layout needs vary - column ratios, gap
 - Use `class="section-divider"` for centered section title slides
 - Wrap main content in `<div class="content">` for consistent spacing. This is a flexbox container that fills the remaining vertical space below the title, ensuring content flows properly.
 - Use `<div class="footnote">` for attribution or source text at bottom
+- **All visible text must be inside a text element** (`<p>`, `<li>`, or `<h1>`–`<h6>`). These elements inherit the base font-size, color, and line-height from the CSS. Never put text directly in `<span>` or `<div>` — they won't pick up the base styles and will render at the wrong size. Use `<div>` only as a layout container (for grids, flexbox, etc.), with `<p>` elements inside it for the actual text.
 
 ### Step 5: Check for Content Overflow
 
@@ -288,19 +291,7 @@ Then use the Read tool to examine each screenshot image file.
 
 The overflow script catches most layout issues, but these problems require visual inspection:
 
-1. **Color inheritance in containers**: Text inside boxes or callouts may inherit the wrong color from parent elements. If you have light text on a dark page background, text inside a light-colored `.box` or `.callout` will be unreadable unless you explicitly set dark text color for that container.
-
-   **Fix pattern** - explicitly set text and bullet colors for light containers:
-   ```css
-   .box-light p,
-   .box-light li {
-     color: var(--text-dark);
-   }
-
-   .box-light ul li::before {
-     background: var(--primary-color);  /* bullet color */
-   }
-   ```
+1. **Color inheritance in containers**: Text inside styled containers may inherit the wrong color from parent elements. If you have light text on a dark page background, text inside a light-colored container will be unreadable unless you explicitly set dark text color for that container.
 
 2. **Custom bullet/list styling**: If you override default list styles, bullets may not contrast well on all container backgrounds.
 
@@ -339,40 +330,6 @@ This opens the presentation in a local server where they can click any text to e
 > Click any text to edit, press Escape to deselect, then click Save. Press Ctrl+C to stop the server when done.
 
 ## CSS Components Reference
-
-### Boxes
-```css
-.box {
-  background: var(--box-bg);
-  border: 1px solid var(--box-border);
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.box-outlined {
-  border: 1px solid var(--box-border);
-  border-radius: 8px;
-  padding: 20px;
-  background: transparent;
-}
-```
-
-### Callouts
-```css
-.callout {
-  border-left: 6px solid var(--primary-color);
-  padding: 15px 20px;
-  margin: 15px 0;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-/* Color variants */
-.callout-blue { border-left-color: #2196F3; background: #e3f2fd; }
-.callout-orange { border-left-color: #ff9800; background: #fff3e0; }
-.callout-green { border-left-color: #4caf50; background: #e8f5e9; }
-.callout-gray { border-left-color: #666; background: #f5f5f5; }
-```
 
 ### Blockquotes
 ```css

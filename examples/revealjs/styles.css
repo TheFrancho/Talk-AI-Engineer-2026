@@ -81,6 +81,12 @@
   font-size: var(--base-font-size);
 }
 
+/* Restore bold after reset.css strips it with font: inherit */
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
