@@ -231,6 +231,36 @@
   min-width: 150px;
 }
 
+.reveal .slides section#mapa-de-roles {
+  padding: 28px 28px 40px 28px !important;
+}
+
+#mapa-de-roles h2 {
+  font-size: 40pt;
+}
+
+#mapa-de-roles .content {
+  padding-top: 12px !important;
+}
+
+#mapa-de-roles .comparison-table {
+  font-size: 15pt;
+}
+
+#mapa-de-roles .comparison-table th,
+#mapa-de-roles .comparison-table td {
+  padding: 13px 9px;
+}
+
+#mapa-de-roles .comparison-table td:first-child,
+#mapa-de-roles .comparison-table th:first-child {
+  min-width: 150px;
+}
+
+#mapa-de-roles .comparison-table .fit {
+  min-width: 190px;
+}
+
 .role-layout {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -240,8 +270,8 @@
 }
 
 .role-layout ul li {
-  font-size: 17pt;
-  margin-bottom: 14px;
+  font-size: 22pt;
+  margin-bottom: 18px;
 }
 
 .role-focus {
@@ -253,11 +283,16 @@
 
 .role-focus .card {
   flex: 0 0 auto;
-  padding: 20px;
+  padding: 24px;
 }
 
 .role-focus h3 {
   margin-top: 0;
+  font-size: 28pt;
+}
+
+.role-focus p {
+  font-size: 21pt;
 }
 
 .pivot-tag {
@@ -270,7 +305,7 @@
 
 .pivot-tag p {
   margin: 0;
-  font-size: 17pt;
+  font-size: 21pt;
 }
 
 .pivot-tag strong {
