@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como volverse AI Engineer en 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon" id="theme-icon"></i>
+    <span id="theme-text">Dark</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title" class="section-divider">
+        <h1>Como volverse AI Engineer en 2026</h1>
+      </section>
+
+      <section id="quien-soy">
+        <h2>Quién Soy</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: center;">
+            <div class="stat-box" style="padding: 35px;">
+              <div class="stat-number" style="font-size: 42pt; line-height: 1.1;">Sebastián Franco</div>
+              <div class="stat-label" style="font-size: 16pt; margin-top: 15px;">AI Engineer</div>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Background en AI</strong> desde 2019</li>
+                <li><strong>Experiencia en ML</strong> en startups</li>
+                <li><strong>GenAI</strong> en S&amp;P100</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vamos-a-hablar-de">
+        <h2>Vamos a hablar de</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; align-items: stretch;">
+            <div class="card">
+              <h3><i class="fa-solid fa-user-gear" style="margin-right: 10px;"></i>01</h3>
+              <p>Qué es ser <strong>AI Engineer</strong> en realidad</p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-sitemap" style="margin-right: 10px;"></i>02</h3>
+              <p>Cuáles son los <strong>roles actuales</strong> de AI Engineer</p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-bullseye" style="margin-right: 10px;"></i>03</h3>
+              <p>En qué debería enfocarme según <strong>cada rol</strong></p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-door-open" style="margin-right: 10px;"></i>04</h3>
+              <p>Cómo salir del <strong>“Theoretical Hell”</strong></p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-comments" style="margin-right: 10px;"></i>05</h3>
+              <p>Cómo romperla en <strong>entrevistas</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="que-es-ser-ai-engineer">
+        <h2>Qué es ser AI Engineer</h2>
+        <div class="content">
+          <div style="display: flex; justify-content: center; align-items: center; flex: 1;">
+            <img src="statics/4_years_fastapi_experience_by_tiangolo.png" alt="Tweet sobre años de experiencia en FastAPI" style="max-width: 100%; max-height: 540px; border-radius: 8px; border: 1px solid var(--line-color);">
+          </div>
+        </div>
+      </section>
+
+      <section id="amalgama-de-roles">
+        <h2>AI Engineer es una amalgama de diferentes roles</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; flex: 1;">
+            <blockquote style="margin: 0;">
+              La industria no tiene idea de qué quiere <strong>(todavía)</strong>.
+            </blockquote>
+            <div class="card">
+              <h3><i class="fa-solid fa-hourglass-half" style="margin-right: 10px;"></i>Por qué pasa</h3>
+              <p>El rol es demasiado joven aún.</p>
+              <p class="text-muted">Estamos nombrando una disciplina mientras la estamos inventando.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ser-ai-engineer-es">
+        <section id="ser-ai-engineer-workflows">
+          <h2>Ser AI Engineer es:</h2>
+          <div class="content">
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; flex: 1;">
+              <img src="statics/perfiles_ml/1_ai_engineer_whirpool_workflows.png" alt="Perfil de AI Engineer de workflows" style="max-width: 100%; max-height: 500px; border-radius: 8px; border: 1px solid var(--line-color);">
+              <div class="card">
+                <h3>Un Ingeniero de Workflows</h3>
+                <p>Conecta modelos, herramientas, datos y procesos para automatizar trabajo real.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ser-ai-engineer-fullstack">
+          <h2>Ser AI Engineer es:</h2>
+          <div class="content">
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; flex: 1;">
+              <img src="statics/perfiles_ml/2_ai_engineer_space_inch_fullstack.png" alt="Perfil de AI Full Stack Engineer" style="max-width: 100%; max-height: 500px; border-radius: 8px; border: 1px solid var(--line-color);">
+              <div class="card">
+                <h3>Un AI Full Stack Engineer</h3>
+                <p>Construye productos completos donde la inteligencia artificial es parte central de la experiencia.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ser-ai-engineer-agentic">
+          <h2>Ser AI Engineer es:</h2>
+          <div class="content">
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; flex: 1;">
+              <img src="statics/perfiles_ml/3_ai_engineer_vass_agentic.png" alt="Perfil de Agentic AI Engineer" style="max-width: 100%; max-height: 500px; border-radius: 8px; border: 1px solid var(--line-color);">
+              <div class="card">
+                <h3>Un Agentic AI Engineer</h3>
+                <p>Diseña agentes capaces de razonar, usar herramientas y ejecutar tareas con autonomía controlada.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ser-ai-engineer-data-scientist">
+          <h2>Ser AI Engineer es:</h2>
+          <div class="content">
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; flex: 1;">
+              <img src="statics/perfiles_ml/4_ai_engineer_falabella_data_scientist.png" alt="Perfil de AI Engineer orientado a Data Science" style="max-width: 100%; max-height: 500px; border-radius: 8px; border: 1px solid var(--line-color);">
+              <div class="card">
+                <h3>Un Data Scientist aplicado</h3>
+                <p>Convierte análisis, modelos y experimentos en decisiones y capacidades productivas.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ser-ai-engineer-end-to-end">
+          <h2>Ser AI Engineer es:</h2>
+          <div class="content">
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; flex: 1;">
+              <img src="statics/perfiles_ml/5_ai_engineer_skydropx_end_to_end.png" alt="Perfil de AI Engineer end-to-end" style="max-width: 100%; max-height: 500px; border-radius: 8px; border: 1px solid var(--line-color);">
+              <div class="card">
+                <h3>Un Ingeniero End-to-End</h3>
+                <p>Se mueve desde el problema de negocio hasta el deployment, monitoreo y mejora del sistema.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ser-ai-engineer-mlops">
+          <h2>Ser AI Engineer es:</h2>
+          <div class="content">
+            <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; flex: 1;">
+              <img src="statics/perfiles_ml/6_ai_engineer_wizeline_mlops.png" alt="Perfil de AI Engineer MLOps" style="max-width: 100%; max-height: 500px; border-radius: 8px; border: 1px solid var(--line-color);">
+              <div class="card">
+                <h3>Un MLOps Engineer</h3>
+                <p>Hace que modelos y sistemas de AI sean confiables, observables y mantenibles en producción.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="mapa-de-roles">
+        <h2>Mapa de roles AI Engineer</h2>
+        <div class="content" style="padding-top: 20px;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Rol</th>
+                <th>Herramientas Externas</th>
+                <th>Ciencia de Datos + Estadística</th>
+                <th>Conocimiento de ML</th>
+                <th>Software Development</th>
+                <th>Cloud Services</th>
+                <th>Óptimo para un background de</th>
+                <th>Facilidad de Pivote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Automation Engineer</td>
+                <td class="score">8/10</td>
+                <td class="score">3/10</td>
+                <td class="score">1/10</td>
+                <td class="score">5/10</td>
+                <td class="score">5/10</td>
+                <td class="fit">CRM, Corporate, Sales, Marketing</td>
+                <td>Fácil</td>
+              </tr>
+              <tr>
+                <td>Full Stack AI Engineer</td>
+                <td class="score">3/10</td>
+                <td class="score">3/10</td>
+                <td class="score">1/10</td>
+                <td class="score">10/10</td>
+                <td class="score">10/10</td>
+                <td class="fit">Software Developer</td>
+                <td>Medio</td>
+              </tr>
+              <tr>
+                <td>GenAI Engineer</td>
+                <td class="score">3/10</td>
+                <td class="score">4/10</td>
+                <td class="score">3/10</td>
+                <td class="score">8/10</td>
+                <td class="score">7/10</td>
+                <td class="fit">Software Developer, ML Engineer, Data Scientist</td>
+                <td>Medio</td>
+              </tr>
+              <tr>
+                <td>ML Engineer</td>
+                <td class="score">2/10</td>
+                <td class="score">8/10</td>
+                <td class="score">10/10</td>
+                <td class="score">5/10</td>
+                <td class="score">5/10</td>
+                <td class="fit">Data Scientist</td>
+                <td>Medio</td>
+              </tr>
+              <tr>
+                <td>Data Scientist</td>
+                <td class="score">2/10</td>
+                <td class="score">10/10</td>
+                <td class="score">8/10</td>
+                <td class="score">3/10</td>
+                <td class="score">3/10</td>
+                <td class="fit">Academia, Investigación</td>
+                <td>Medio</td>
+              </tr>
+              <tr>
+                <td>LLM Engineer</td>
+                <td class="score">5/10</td>
+                <td class="score">10/10</td>
+                <td class="score">10/10</td>
+                <td class="score">5/10</td>
+                <td class="score">5/10</td>
+                <td class="fit">ML Engineer, Data Scientist</td>
+                <td>Difícil</td>
+              </tr>
+              <tr>
+                <td>MLOps / AIOps</td>
+                <td class="score">7/10</td>
+                <td class="score">2/10</td>
+                <td class="score">3/10</td>
+                <td class="score">8/10</td>
+                <td class="score">10/10</td>
+                <td class="fit">Cloud, ML Engineer, AI Full Stack</td>
+                <td>Medio o Difícil</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="automation-engineer">
+        <h2>Automation Engineer</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere conocimiento de <strong>herramientas externas</strong>, integraciones, low code y no code.</li>
+                <li>Requiere conocimiento de <strong>negocio</strong>.</li>
+                <li>Herramientas como <strong>Zapier</strong>, <strong>HubSpot</strong> y <strong>Salesforce</strong> son clave.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-plug" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Automatizar procesos conectando herramientas que ya existen.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>CRM, Corporate, Sales y Marketing.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Medio</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="full-stack-ai-engineer">
+        <h2>Full Stack AI Engineer</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere conocimiento <strong>Full Stack</strong>: frontend, backend y cloud.</li>
+                <li>Requiere conocimiento en <strong>Agentic Tools</strong> como Claude Code y Codex a alta escala.</li>
+                <li>Requiere conocimiento en desarrollos <strong>end to end</strong>.</li>
+                <li>Frameworks FE, BE, DB y Cloud son clave.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-layer-group" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Construir productos completos acelerados por AI.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>Software Developer.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Medio</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="genai-engineer">
+        <h2>GenAI Engineer</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere conocimiento en <strong>Agentic AI</strong>: Pydantic AI, LangGraph y CrewAI.</li>
+                <li>Requiere conocimiento en <strong>Context Engineering</strong>: RAG, Vectorial DB y Harness Engineering.</li>
+                <li>Requiere conocimientos en <strong>ingeniería de software</strong>.</li>
+                <li>Prompt Engineering, Harness Engineering, Agentic Tools y Guardrails son clave.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-brain" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Diseñar sistemas GenAI confiables, evaluables y útiles en producción.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>Software Developer, ML Engineer y Data Scientist.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Medio</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ml-engineer">
+        <h2>ML Engineer</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere conocimiento profundo en <strong>Ciencia de Datos</strong>.</li>
+                <li>Requiere conocimiento profundo en técnicas de <strong>Machine Learning</strong>: arquitecturas, optimizaciones y entrenamiento.</li>
+                <li>Requiere relativo conocimiento de ingeniería de software para sacar soluciones del notebook.</li>
+                <li>ETL, procesamiento de datos, numpy, scipy, scikit-learn y pytorch son clave.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-gears" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Convertir modelos entrenables en sistemas que viven fuera del notebook.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>Data Scientist.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Medio</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="data-scientist">
+        <h2>Data Scientist</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere conocimiento muy profundo en <strong>Ciencia de Datos</strong> y <strong>Estadística</strong>.</li>
+                <li>Requiere métodos matemáticos para obtener <strong>insights</strong>.</li>
+                <li>Requiere conocimiento en técnicas de <strong>Machine Learning</strong>.</li>
+                <li>Matemática, estadística y storytelling son clave.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Transformar datos en explicaciones, decisiones y narrativas accionables.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>Academia e Investigación.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Medio</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="llm-engineer">
+        <h2>LLM Engineer</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere maestría en técnicas de <strong>ML</strong>.</li>
+                <li>Requiere conocimientos en <strong>Ciencia de Datos</strong>.</li>
+                <li>Requiere maestría en ML orientado a <strong>LLMs</strong>.</li>
+                <li>Requiere manejo de datos y poder de cómputo en masa.</li>
+                <li>Requiere conocimientos en <strong>Cloud</strong>.</li>
+                <li>LLMs, Transformers y SOTA son clave.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-microchip" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Trabajar cerca del modelo: arquitectura, entrenamiento, evaluación y escalamiento.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>ML Engineer y Data Scientist.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Difícil</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mlops-engineer">
+        <h2>MLOps Engineer</h2>
+        <div class="content">
+          <div class="role-layout">
+            <div>
+              <ul>
+                <li>Requiere conocimiento en herramientas de <strong>observabilidad</strong> y <strong>gobernanza</strong>.</li>
+                <li>Requiere conocimientos en <strong>Software Development</strong>.</li>
+                <li>Requiere conocimientos profundos en <strong>Cloud Services</strong>.</li>
+              </ul>
+            </div>
+            <div class="role-focus">
+              <div class="card">
+                <h3><i class="fa-solid fa-cloud" style="margin-right: 10px;"></i>Core skill</h3>
+                <p>Operar sistemas de AI con confiabilidad, seguridad, monitoreo y control.</p>
+              </div>
+              <div class="card">
+                <h3>Óptimo para</h3>
+                <p>Cloud, ML Engineer y AI Full Stack.</p>
+              </div>
+              <div class="pivot-tag">
+                <p>Facilidad de pivote: <strong>Medio o Difícil</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="theoretical-hell">
+        <h2>Hablemos del “Theoretical Hell”</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 42px; align-items: center; flex: 1;">
+            <blockquote style="margin: 0;">
+              Mucha teoría. Mucha preparación. <strong>Cero tracción real.</strong>
+            </blockquote>
+            <div class="card">
+              <ul>
+                <li>Ya hice cursos y certificaciones.</li>
+                <li>Hice un Career Path entero en X plataforma.</li>
+                <li>Leí un libro entero sobre el tema.</li>
+                <li>Pero sigo sin <strong>landear oportunidades</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cocinar-vs-ver-cocinar">
+        <h2>Ver a alguien cocinar es diferente a cocinar por uno mismo</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; flex: 1;">
+            <div class="card" style="text-align: center; min-height: 260px; display: flex; flex-direction: column; justify-content: center;">
+              <h3><i class="fa-solid fa-eye" style="margin-right: 10px;"></i>Espectador</h3>
+              <p class="text-xl">Todo parece obvio cuando alguien más ya resolvió los tradeoffs.</p>
+            </div>
+            <div class="card" style="text-align: center; min-height: 260px; display: flex; flex-direction: column; justify-content: center;">
+              <h3><i class="fa-solid fa-hammer" style="margin-right: 10px;"></i>Creador</h3>
+              <p class="text-xl" style="margin-top: 18px;">Solo ahí se siente la carga y las restricciones que ignoramos desde afuera.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dos-diferenciadores">
+        <h2>Hay 2 diferenciadores clave para dominar lo que solo tenemos como aprendido</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; flex: 1;">
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 36px;">
+              <div class="stat-number" style="font-size: 36pt;">01</div>
+              <h3>Hands-on experience</h3>
+              <p>Construir lo suficiente para que aparezcan las restricciones reales.</p>
+            </div>
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 36px;">
+              <div class="stat-number" style="font-size: 36pt;">02</div>
+              <h3>La “serialización” de mis soluciones</h3>
+              <p>Convertir lo que resolví en evidencia clara, explicable y reutilizable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hands-on-experience">
+        <h2>Las hands-on experience</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: stretch; flex: 1;">
+            <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
+              <h3><i class="fa-solid fa-book-open" style="margin-right: 10px;"></i>Aprendizaje pasivo</h3>
+              <ul>
+                <li>Puedo leer cientos de horas sobre cualquier tema.</li>
+                <li>Puedo aprender durante semanas cómo se usa, para qué sirve y cuáles son sus limitantes.</li>
+              </ul>
+            </div>
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 30px;">
+              <div class="stat-number" style="font-size: 34pt; line-height: 1.15;">Pero...</div>
+              <p class="text-xl" style="margin-top: 18px;">Hasta que no me choque con los problemas, no voy a dominar lo que estoy aprendiendo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problema-del-semaforo">
+        <h2>El problema del semáforo</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; flex: 1;">
+            <div class="card">
+              <ul>
+                <li>Quiero saber cuántos carros pasan por un semáforo a cierta hora.</li>
+                <li>Recojo información y analizo manualmente.</li>
+                <li>Entreno una regresión. <strong>No funciona.</strong></li>
+              </ul>
+            </div>
+            <blockquote style="margin: 0;">
+              Ya no investigo a ciegas, sin saber por qué aprendo. Ahora investigo para <strong>resolver un problema</strong>.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="errores-dan-insights">
+        <h2>Los errores nos dan insights</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; flex: 1;">
+            <div>
+              <h3 style="color: var(--primary-color);">Y esa es la gasolina de la experiencia</h3>
+              <ul>
+                <li>En siguientes iteraciones voy a frustrarme porque el modelo no funciona.</li>
+                <li>Voy a iterar y recoger más información.</li>
+                <li>Voy a entender que los horarios importan y que el día de la semana importa.</li>
+                <li>Voy a interiorizar qué información necesito, cómo la trituro y qué puedo ignorar.</li>
+              </ul>
+            </div>
+            <div class="stat-box" style="padding: 30px;">
+              <div class="stat-number" style="font-size: 30pt; line-height: 1.15;">Sufrir también enseña</div>
+              <p class="text-lg" style="margin-top: 18px;">Puede que solucione o no el problema, pero todo lo que aprendí “sufriendo” me dio experiencia valiosa que la teoría no me ayudó a desarrollar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="segundo-diferenciador-serializacion">
+        <h2>El segundo diferenciador: la serialización</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; flex: 1;">
+            <blockquote style="margin: 0;">
+              Nuestro conocimiento escala en proporción a las <strong>nociones</strong> que tenemos.
+            </blockquote>
+            <div class="card">
+              <h3><i class="fa-solid fa-industry" style="margin-right: 10px;"></i>Sistemas reales</h3>
+              <p>Si no nos exponemos a sistemas reales, es poco probable encajar en la industria.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="conocimiento-con-experiencia">
+        <h2>El conocimiento ahora que tenemos experiencia</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 38px; align-items: center; flex: 1;">
+            <div>
+              <ul>
+                <li>Ahora que sufrimos haciendo nuestra solución, podemos revisar cómo ha sido solucionado en la industria.</li>
+                <li>Hay documentos técnicos, repositorios, blogs e infinidad de recursos para lo que necesitemos.</li>
+              </ul>
+            </div>
+            <div class="stat-box" style="padding: 30px;">
+              <div class="stat-number" style="font-size: 28pt; line-height: 1.15;">La diferencia vital</div>
+              <p class="text-lg" style="margin-top: 18px;">Ahora podemos empatizar con por qué se tomaron ciertas decisiones, no aceptarlas como una verdad absoluta en un Learning Path seguido casi a ciegas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="combo-hands-on-serializacion">
+        <h2>El combo hands-on + serialización nos permite entender cómo solucionar problemas de gran profundidad a escala</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; flex: 1;">
+            <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
+              <h3><i class="fa-solid fa-briefcase" style="margin-right: 10px;"></i>Vacante formal</h3>
+              <p class="text-xl">Eso nos acerca a lo que eventualmente vamos a hacer en un trabajo real.</p>
+            </div>
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 36px;">
+              <div class="stat-number" style="font-size: 34pt; line-height: 1.15;">Mismo juego</div>
+              <p class="text-xl" style="margin-top: 18px;">Al final es hacer lo mismo, pero empezando antes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="romperla-en-interviews" class="section-divider">
+        <h1>Cómo romperla en Interviews</h1>
+        <p>Ahora que tenemos hands-on experience + serialización, ¿cómo hacemos para romperla en una entrevista?</p>
+      </section>
+
+      <section id="dos-hitos">
+        <h2>Los 2 hitos</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch;">
+            <div class="stat-box" style="padding: 34px;">
+              <div class="stat-number">01</div>
+              <h3>El reclutador</h3>
+              <p>Primero hay que pasar el filtro de claridad, relevancia y señales visibles.</p>
+            </div>
+            <div class="stat-box" style="padding: 34px;">
+              <div class="stat-number">02</div>
+              <h3>El Engineering Manager</h3>
+              <p>Luego hay que demostrar criterio técnico, profundidad y capacidad de ejecución.</p>
+            </div>
+          </div>
+          <blockquote>
+            El software en la era de la IA no premia la memorización: premia los <strong>fundamentos</strong> y las <strong>capacidades</strong>.
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="tres-factores-clave">
+        <h2>Los 3 factores clave</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; flex: 1;">
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 32px;">
+              <div class="stat-number">01</div>
+              <h3>La Agencia</h3>
+            </div>
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 32px;">
+              <div class="stat-number">02</div>
+              <h3>El Feature Owning</h3>
+            </div>
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 32px;">
+              <div class="stat-number">03</div>
+              <h3>El Crecimiento y la Incomodidad</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyecto-estrella">
+        <h2>El proyecto estrella</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 36px; align-items: start; flex: 1;">
+            <div class="stat-box" style="padding: 30px;">
+              <div class="stat-number" style="font-size: 30pt;">STAR</div>
+              <p><strong>Situation</strong> - <strong>Task</strong> - <strong>Action</strong> - <strong>Result</strong></p>
+              <p class="text-muted">Prepararlo con antelación.</p>
+            </div>
+            <div>
+              <h3 style="color: var(--primary-color);">Una pequeña variación</h3>
+              <ul>
+                <li>Qué es lo más difícil que he hecho.</li>
+                <li>Por qué es lo más difícil que he hecho.</li>
+                <li>Qué fue lo que hice para solucionarlo.</li>
+                <li>En qué sufrí para hacerlo.</li>
+                <li>Qué haría mejor ahora.</li>
+              </ul>
+            </div>
+          </div>
+          <blockquote>
+            Un buen pitch va a eliminar dudas técnicas y de habilidades blandas.
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="poder-de-las-comunidades">
+        <h2>El poder de las comunidades</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; align-items: stretch; flex: 1;">
+            <div class="card">
+              <h3><i class="fa-solid fa-people-group" style="margin-right: 10px;"></i>Aportar</h3>
+              <p>Aportar a comunidades demuestra todo lo que hemos hablado antes.</p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-microphone" style="margin-right: 10px;"></i>Exponer agencia</h3>
+              <p>Dar charlas, compartir conocimiento o apoyar en logística muestra iniciativa real.</p>
+            </div>
+            <div class="stat-box" style="padding: 28px;">
+              <div class="stat-number" style="font-size: 28pt; line-height: 1.15;">Boost</div>
+              <p class="text-lg" style="margin-top: 16px;">No son experiencia laboral, pero sí un boost de crecimiento y confianza.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interviewing-es-habilidad">
+        <h2>Interviewing es una habilidad más</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; flex: 1;">
+            <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
+              <h3><i class="fa-solid fa-code" style="margin-right: 10px;"></i>Developer</h3>
+              <p class="text-xl">Ser malo en entrevistas no significa ser malo como developer.</p>
+            </div>
+            <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center; padding: 36px;">
+              <div class="stat-number" style="font-size: 32pt; line-height: 1.15;">También aplica al revés</div>
+              <p class="text-xl" style="margin-top: 18px;">Lo contrario también es cierto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="no-exclusivo-ai-engineering">
+        <h2>Todo lo anterior no es exclusivo a AI Engineering</h2>
+        <div class="content">
+          <div style="display: flex; align-items: center; justify-content: center; flex: 1;">
+            <div class="stat-box" style="max-width: 900px; padding: 42px;">
+              <div class="stat-number" style="font-size: 34pt; line-height: 1.15;">Pero sí es urgente ahora</div>
+              <p class="text-2xl" style="margin-top: 22px;">Todo esto aplica al mundo actual del <strong>AI en el código</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tldr">
+        <h2>TL;DR</h2>
+        <div class="content">
+          <div class="card" style="padding: 34px;">
+            <ul>
+              <li>Ya sabemos qué es ser <strong>AI Engineer</strong>.</li>
+              <li>Ya sabemos todos los posibles sabores de <strong>AI Engineer</strong>.</li>
+              <li>Ya sabemos qué necesita cada rol de AI Engineer actual.</li>
+              <li>Ya sabemos cómo aprender a ser AI Engineer.</li>
+              <li>Ya sabemos cómo romperla en entrevistas en el mundo de AI.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="preguntas" class="section-divider">
+        <h1>¿Preguntas?</h1>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      mouseWheel: true,
+      transition: 'slide',
+      center: false
+    });
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      const text = document.getElementById('theme-text');
+      if (html.classList.contains('dark-mode')) {
+        html.classList.remove('dark-mode');
+        icon.className = 'fa-solid fa-moon';
+        text.textContent = 'Dark';
+      } else {
+        html.classList.add('dark-mode');
+        icon.className = 'fa-solid fa-sun';
+        text.textContent = 'Light';
+      }
+    }
+  </script>
+</body>
+</html>

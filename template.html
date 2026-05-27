@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pereira Tech Day - Template</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon" id="theme-icon"></i>
+    <span id="theme-text">Dark</span>
+  </button>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title" class="section-divider">
+        <h1>Presentation Title</h1>
+        <p>Subtitle or description goes here</p>
+      </section>
+
+      <section id="agenda">
+        <h2>Qué Esperar</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px;">
+            <div>
+              <div class="card" style="margin-bottom: 20px;">
+                <h3><i class="fa-solid fa-clock" style="margin-right: 10px;"></i>Cronograma</h3>
+                <p>8:00 AM - Registration</p>
+                <p>9:00 AM - Opening</p>
+                <p>9:30 AM - Talks begin</p>
+                <p>5:00 PM - Closing</p>
+              </div>
+              <span class="tag"><i class="fa-solid fa-location-dot" style="margin-right: 6px;"></i>UTP, Pereira</span>
+            </div>
+            <div>
+              <h3 style="color: var(--primary-color); margin-bottom: 15px;">Topics Covered</h3>
+              <ul>
+                <li><strong>Inteligencia Artificial</strong> - LLMs, ML pipelines, AI products</li>
+                <li><strong>Software Development</strong> - Web, mobile, architecture patterns</li>
+                <li><strong>Cybersecurity</strong> - Threat modeling, secure coding</li>
+                <li><strong>Career Growth</strong> - Tech hiring, community building</li>
+              </ul>
+              <blockquote>
+                "Where talent, technology, and brands <strong>meet</strong>."
+                <cite>— Pereira Tech Day 2026</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="communities">
+        <h2>Comunidades Organizadoras</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
+            <div class="card">
+              <h3><i class="fa-brands fa-python" style="margin-right: 10px;"></i>Python Pereira</h3>
+              <p>Comunidad de desarrolladores Python en Pereira. Meetups mensuales, workshops y hackathons.</p>
+              <span class="tag" style="margin-top: 10px;">py pereira.co</span>
+            </div>
+            <div class="card">
+              <h3><i class="fa-brands fa-js" style="margin-right: 10px;"></i>PereiraJS</h3>
+              <p>Comunidad JavaScript de Pereira. JavaScript, TypeScript, Node.js y frameworks modernos.</p>
+              <span class="tag" style="margin-top: 10px;">perjs.org</span>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-microphone" style="margin-right: 10px;"></i>Pereira Tech Talks</h3>
+              <p>Comunidad de speakers y entusiastas tech. Impulsando el ecosistema tecnológico de la región.</p>
+              <span class="tag" style="margin-top: 10px;">pereiratechtalks.org</span>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-code-branch" style="margin-right: 10px;"></i>Joint Developer</h3>
+              <p>Red de desarrolladores con enfoque colaborativo. Proyectos open source y mentoría.</p>
+              <span class="tag" style="margin-top: 10px;">jointdevweb.firebaseapp.com</span>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 30px;">
+            <p class="text-muted" style="font-size: 14pt;">
+              <i class="fa-solid fa-heart" style="color: var(--primary-color);"></i>
+              powered by <strong>Pereira Tech Talks</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      mouseWheel: true,
+      transition: 'slide',
+      center: false
+    });
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      const text = document.getElementById('theme-text');
+      if (html.classList.contains('dark-mode')) {
+        html.classList.remove('dark-mode');
+        icon.className = 'fa-solid fa-moon';
+        text.textContent = 'Dark';
+      } else {
+        html.classList.add('dark-mode');
+        icon.className = 'fa-solid fa-sun';
+        text.textContent = 'Light';
+      }
+    }
+  </script>
+</body>
+</html>

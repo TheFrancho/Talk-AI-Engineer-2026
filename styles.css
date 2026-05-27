@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+  --background-color: #FFFFFF;
+  --primary-color: #059669;
+  --accent-color: #10B981;
+  --secondary-color: #EA580C;
+  --text-color: #0F172A;
+  --muted-color: #64748B;
+  --line-color: #E2E8F0;
+  --heading-font: "Source Sans Pro", Helvetica, sans-serif;
+  --body-font: "Source Sans Pro", Helvetica, sans-serif;
+  --base-font-size: 32px;
+  --text-size: 16pt;
+  --h1-size: 48pt;
+  --h2-size: 36pt;
+  --h3-size: 24pt;
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 30px;
+  --box-radius: 8px;
+}
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0; }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p, .reveal li {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.reveal .slides section {
+  height: 100%;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+  z-index: 1;
+}
+
+.reveal .slides section.present {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.reveal .slides section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  z-index: 0;
+}
+
+.reveal .slides section > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--content-gap);
+}
+
+.reveal .slides section.section-divider.present {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 56pt;
+}
+
+.reveal .slides section.section-divider p {
+  font-size: 20pt;
+  color: var(--muted-color);
+}
+
+.reveal blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--text-color);
+  background: none;
+  box-shadow: none;
+}
+
+.reveal blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  color: var(--muted-color);
+}
+
+.reveal-viewport {
+  background: var(--background-color) !important;
+}
+
+.reveal .slides section {
+  background-color: var(--background-color) !important;
+}
+
+.text-lg { font-size: 18pt !important; }
+.text-xl { font-size: 20pt !important; }
+.text-2xl { font-size: 24pt !important; }
+.text-3xl { font-size: 28pt !important; }
+.text-4xl { font-size: 32pt !important; }
+.text-muted { color: var(--muted-color) !important; }
+.text-center { text-align: center !important; }
+.text-uppercase { text-transform: uppercase; letter-spacing: 0.1em; }
+.font-light { font-weight: 300; }
+.font-bold { font-weight: 600; }
+
+.tag {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 25px;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.stat-box {
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--box-radius);
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-box .stat-number {
+  font-size: 36pt;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-box .stat-label {
+  font-size: 14pt;
+  color: var(--muted-color);
+  margin-top: 5px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5pt;
+  color: var(--text-color);
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid var(--line-color);
+  padding: 11px 10px;
+  vertical-align: middle;
+  line-height: 1.3;
+}
+
+.comparison-table th {
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.comparison-table td:first-child,
+.comparison-table th:first-child {
+  font-weight: 700;
+  color: var(--text-color);
+  min-width: 125px;
+}
+
+.comparison-table .score {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.comparison-table .fit {
+  min-width: 150px;
+}
+
+.role-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: start;
+  flex: 1;
+}
+
+.role-layout ul li {
+  font-size: 17pt;
+  margin-bottom: 14px;
+}
+
+.role-focus {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+.role-focus .card {
+  flex: 0 0 auto;
+  padding: 20px;
+}
+
+.role-focus h3 {
+  margin-top: 0;
+}
+
+.pivot-tag {
+  display: block;
+  background: rgba(234, 88, 12, 0.1);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--box-radius);
+  padding: 16px 18px;
+}
+
+.pivot-tag p {
+  margin: 0;
+  font-size: 17pt;
+}
+
+.pivot-tag strong {
+  color: var(--secondary-color);
+}
+
+html.dark-mode {
+  --background-color: #0F172A;
+  --primary-color: #10B981;
+  --accent-color: #34D399;
+  --text-color: #F8FAFC;
+  --muted-color: #94A3B8;
+  --line-color: #334155;
+}
+
+html.dark-mode .card {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html.dark-mode .stat-box {
+  background: rgba(16, 185, 129, 0.12);
+}
+
+html.dark-mode .reveal-viewport,
+html.dark-mode .reveal .slide-background {
+  background-color: var(--background-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: 14pt;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+html.dark-mode .theme-toggle {
+  color: var(--text-color);
+}
